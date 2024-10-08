@@ -1,14 +1,20 @@
+//init the terraform config
 terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.66.0"
+      version = ">= 4.47"
+    }
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.10"
     }
   }
 }
 
 
 provider "aws" {
-  # profile = "default"
-  region = "ap-northeast-1"
+  region  = "ap-northeast-1" # switch other ap-southeast-1 or
+#  profile = "vti"
 }
+provider "random" {}
