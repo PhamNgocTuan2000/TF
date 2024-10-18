@@ -6,7 +6,7 @@ add the iam policy
 step 1: curl -O https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.2/docs/install/iam_policy.json
 
 step 2: aws iam create-policy   
---policy-name PNTLoadBalancerControllerIAMPolicy   
+--policy-name PTLoadBalancerControllerIAMPolicy   
 --policy-document file://iam_policy.json   
 --profile default
 
@@ -21,7 +21,7 @@ eksctl create iamserviceaccount \
 --cluster=phamtuan-eks \
 --namespace=kube-system \  
 --name=awsalb-controller \  
---role-name PNTAmazonEKSLoadBalancerControllerRole \   
+--role-name PTAmazonEKSLoadBalancerControllerRole \   
 --attach-policy-arn=arn:aws:iam::084375555299:policy/AWSLoadBalancerControllerIAMPolicy \ 
 --approve \   
 --profile default   
@@ -35,7 +35,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller
 --set serviceAccount.create=false \  
 --set serviceAccount.name=awsalb-controller \
 --set region=ap-northeast-1 \
---set vpcId=vpc-0d49b765f638bc309
+--set vpcId=vpc-0583cf412b4f57de8
 
 verify
 

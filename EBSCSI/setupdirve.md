@@ -20,7 +20,7 @@ aws iam create-policy  \
 --profile default
 
 aws iam attach-role-policy   
---policy-arn arn:aws:iam::084375555299:policy/QNV_KMS_Key_For_Encryption_On_EBS_Policy   
+--policy-arn arn:aws:iam::084375555299:policy/PT_KMS_Key_For_Encryption_On_EBS_Policy   
 --role-name DE000014_AmazonEKS_EBS_CSI_DriverRole   
 --profile default
 

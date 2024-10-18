@@ -5,8 +5,8 @@
 AWS_REGION=ap-northeast-1 
 AWS_PROFILE=default 
 EKS_CLUSTER_NAME=phamtuan-eks 
-AWS_USER_ARN=arn:aws:iam::084375555299:user/DE000014
-AWS_USERNAME=DE000014
+AWS_USER_ARN=arn:aws:iam::084375555299:user/quyennv_user
+AWS_USERNAME=quyennv_user
 TYPE_ACCESS=cluster 
 POLICY_ARN=arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy
 
