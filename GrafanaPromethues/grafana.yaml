@@ -7,3 +7,9 @@ datasources:
       url: http://prometheus-server.prometheus.svc.cluster.local
       access: proxy
       isDefault: true
+
+    - name: LokiApp
+      type: Loki
+      url: https://loki.logging.svc.cluster.local
+      access: proxy
+      isDefault: true
