@@ -79,3 +79,27 @@ module "ec2" {
   )
 
 }
+
+# main.tf
+module "app_s3" {
+  source = "./_modules/s3"
+
+  bucket_name = "phamngoctuan-tfstate"
+  environment = var.environment
+  tags = {
+    Project = "YourProjectName"
+  }
+}
+
+module "app_ecr" {
+  source = "./_modules/ecr"
+
+  repository_name = "your-app-repository"
+  environment     = var.environment
+  allowed_principals = [
+    "arn:aws:iam::${data.aws_caller_identity.current.084375555299}:root" 
+  ]
+  tags = {
+    Project = "YourProjectName"
+  }
+}
