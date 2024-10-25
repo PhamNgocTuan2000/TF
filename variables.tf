@@ -109,19 +109,3 @@ variable "env_prefix" {
 
 }
 
-# variables.tf
-variable "environment" {
-  description = "Environment name"
-  type        = string
-  default     = "dev"
-}
-
-variable "s3_bucket_name" {
-  description = "phamngoctuan-tfstate"
-  type        = string
-}
-
-variable "ecr_repository_name" {
-  description = "Name for the ECR repository"
-  type        = string
-}
